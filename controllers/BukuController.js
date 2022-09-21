@@ -59,7 +59,7 @@ async function getAllBuku(req, res) {
         code: req.params.code,
       },
     });
-    return res.status(201).json({
+    return res.status(200).json({
       status: "Success",
       msg: "Buku ditemukan",
       data: books,
@@ -81,7 +81,7 @@ async function getBukuDetail(req, res) {
         id: req.params.id,
       },
     });
-    return res.status(201).json({
+    return res.status(200).json({
       status: "Success",
       msg: "Buku ditemukan",
       data: books,
