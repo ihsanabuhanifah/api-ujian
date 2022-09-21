@@ -5,24 +5,22 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
 const port = process.env.PORT || 8000;
-cors
+cors;
 var moment = require("moment-timezone");
 let date = moment().tz("Asia/Jakarta").format("hh:mm:ss");
 
 const { sequelize } = require("./models");
 const cron = require("node-cron");
 
-
-
-
-
-
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
-
+app.get("/", (req, res) => {
+  return res.json({
+    status: "ok",
+  });
+});
 app.use(router);
-
 
 app.listen(port, async () => {
   try {
