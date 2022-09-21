@@ -28,5 +28,6 @@ app.listen(port, async () => {
     console.log(`Connection has been established successfully ${port}`);
   } catch (error) {
     console.error("Koneksi ke database gaagal");
+    console.log(error)
   }
 });
